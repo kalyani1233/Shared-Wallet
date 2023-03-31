@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shared Wallet</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Shared Wallet</h1>
+	<p>Contract Address: <span id="contractAddress"></span></p>
+	<p>Owner Address: <span id="ownerAddress"></span></p>
+	<div class="form-container">
+		<h2>Add Owner</h2>
+		<form id="addOwnerForm">
+			<label for="newOwner">New Owner Address:</label>
+			<input type="text" id="newOwner" name="newOwner" required>
+			<input type="submit" value="Add Owner">
+		</form>
+	</div>
+	<div class="form-container">
+		<h2>Remove Owner</h2>
+		<form id="removeOwnerForm">
+			<label for="existingOwner">Existing Owner Address:</label>
+			<input type="text" id="existingOwner" name="existingOwner" required>
+			<input type="submit" value="Remove Owner">
+		</form>
+	</div>
+	<div class="form-container">
+		<h2>Transfer Funds</h2>
+		<form id="transferFundsForm">
+			<label for="toAddress">To Address:</label>
+			<input type="text" id="toAddress" name="toAddress" required>
+			<label for="transferAmount">Amount:</label>
+			<input type="text" id="transferAmount" name="transferAmount" required>
+			<input type="submit" value="Transfer Funds">
+		</form>
+	</div>
+	<div class="form-container">
+		<h2>Withdraw Funds</h2>
+		<form id="withdrawFundsForm">
+			<label for="withdrawAmount">Amount:</label>
+			<input type="text" id="withdrawAmount" name="withdrawAmount" required>
+			<input type="submit" value="Withdraw Funds">
+		</form>
+	</div>
+	<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+</body>
+</html>
